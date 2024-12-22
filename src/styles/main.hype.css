@@ -1,0 +1,224 @@
+/* @import url('http://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css');
+*/
+
+/*a hype version of the normal css version*/
+
+*  {
+  margin: 0;
+  padding : .6rem;
+  font-family: 'Courier New', cursive;
+  /* border: solid 1px skyblue; */
+  border-radius: 5px;
+  color: #cdcdcd;
+}
+
+html{
+  padding: 0;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+  grid-template-rows: auto 1fr auto;
+}
+
+header, footer {
+  height: 100dvh;
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h1 {
+  scale: 2;
+  transition: .3s;
+}
+
+header h1:hover {
+  scale: 2.5;
+}
+
+header nav {
+  display: none;
+}
+
+header{
+  border-bottom: solid 1px;
+}
+
+footer{
+  border-top: solid 1px;
+  flex-direction: column;
+}
+
+footer * {
+  scale: 2;
+  transition: .3s;
+}
+
+footer *:hover {
+  scale: 2.5;
+}
+
+main {
+  min-height: fit-content;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+section {
+  width: 80%;
+  min-height: 100dvh;
+  margin: 5rem auto;
+  /* box-shadow: 0px 0px 16px 0.5px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 2rem;
+  /*flex: 1;*/
+}
+
+article{ 
+  box-shadow: 0px 0px 12px 0.5px;
+}
+
+section *{
+  /* box-shadow: 0px 0px 16px 0.5px; */
+  min-height: 95%;
+  min-width: auto;
+  flex: 1;
+  flex-grow: 1;
+}
+
+input{
+  color: black;
+}
+
+.services article:hover {
+  scale: 1;
+}
+
+/*
+.services, .about {
+  display: none;
+}
+*/
+
+/* banners */
+.banner {
+  display: flex;
+  width: 30rem;
+  height: 20rem;
+  transition: .3s;
+}
+
+.banner img {
+  padding: 0;
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 8;
+  transition: 1.5s ease;
+}
+
+.banner img:hover {
+  cursor: crosshair;
+  width: 20rem;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.docs, .projects {
+  box-shadow: 0 0 0 0;
+}
+
+.docs, .projects {
+  scale: 1;
+}
+
+.aboutMe, .main, .services article {
+  box-shadow: 0 0 0 0;
+  border-bottom: solid .1rem;
+}
+
+
+/* onload animation and pop animations */
+article {
+  animation: .8s ease-out 0s 1 welcome;
+  transition: .3s;
+}
+
+.banner:hover {
+  scale: 1.13;
+}
+
+article:hover {
+  scale: 1.13;
+}
+
+@keyframes welcome {
+  0% {
+    scale: 2.5;
+    opactiy: 0;
+  }
+
+  33% {
+    scale: 2.0;
+    opacity: 0.3;
+  }
+
+  66% {
+    scale: 1.5;
+    opacity: 0.6;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/* scroll effect*/
+
+section {
+  view-timeline: --scroll;
+}
+
+section article:fist-child {
+  animation: fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: exit 20% exit 90%;
+}
+
+section article:last-child {
+  animation:
+    scale-up both ease-in-out,
+    fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range:
+    exit 0% exit 100%,
+    exit 50% exit 90%;
+}
+
+@keyframes scale-up {
+  to { scale: 1.5; }
+}
+
+@keyfreames fade-away {
+  to { opacity: 0; }
+}
+
+

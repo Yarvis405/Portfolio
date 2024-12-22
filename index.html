@@ -1,0 +1,189 @@
+<!Doctype html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script src="/src/scr/main.js" type="module" defer></script>
+    <!--<script src="/src/scr/modules/.service/init.service.js" defer></script>-->
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">my portfolio</a>
+      </h1>
+    
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+  
+    <main>
+      <!--
+        - Home
+        - Service
+        - About
+      -->
+    
+      <!-- Home -->
+      <section class="home">
+      
+        <article class="aboutMe">
+        
+          <h2>Who Am I?</h2>
+        
+          <div>
+            <h3>Eben C.</h3>
+            <p>description/brief/summary</p>
+          </div>
+      
+        </article>
+      
+        <article class="projects" v-scope="githubAPIWrapper({
+              api: 'https://api.github.com/users',
+              user: 'Yarvis405'
+            })">
+        
+          <h2>Projects</h2>
+
+          <span style="display: none;">{{ init() }}</span>
+        
+          <div class="banner">
+            <!--<span style="display: none">{{ init() }}</span>-->
+            
+            <!---->
+            <div
+              class="item"
+              v-for="repo in repos">
+              
+              <!---->
+              <img 
+                id="img " 
+                v-effect="
+                  $el.id+=repo.id;
+                  $el.src=repo.thumbnail;
+                "  
+                @error="$el.src='/src/res/img4.jpeg'"
+                alt='items' class="img" />
+              <!---->
+              <label 
+                v-effect="$el.htmlFor=repo.id" 
+                class="link" 
+                id="link" >
+
+                <a v-effect="$el.href=repo.uri" target="_blank">{{ repo.name }}</a>
+              
+              </label>
+
+            </div>
+            <!---->
+
+            
+
+            <!----
+            <img src="/src/res/img1.jpeg" alt="project 1" class="img" />
+            <img src="/src/res/img2.jpeg" alt="project 2" class="img" />
+            <img src="/src/res/img3.jpeg" alt="project 3" class="img" />
+            <img src="/src/res/img4.jpeg" alt="project 4" class="img" />
+            <img src="/src/res/img5.jpeg" alt="project 5" class="img" />
+            !---->
+
+          </div>
+      
+        </article>
+    
+      </section>
+    
+      <!--Services-->
+      <section class="services" id="services">
+      
+        <article class="form">
+          <h2>Services</h2>
+        
+          <form>
+            
+            <div class="mail">
+              <label for="mail">Email</label>
+              <input type="email" placeholder="example@domain.com" required />
+            </div>
+          
+            <ul>
+
+              <li>
+                <input type="radio" name="option" id="option-dev">
+                <label for="option-dev">Web Development</label>
+              </li>
+            
+              <li>
+                <input type="radio" name="option" id="option-hosting">
+                <label for="option-hosting">Hosting</label>
+              </li>
+            
+              <li>
+                <input type="radio" name="option" id="option-support">
+                <label for="option-support">Support</label>
+              </li>
+            
+            </ul>
+          
+            <input type="submit" class="btn">
+        
+          </form>
+        
+        </article>
+      
+      </section>
+    
+      <!--About-->
+      <section class="about" id="about">
+      
+        <article class="main">
+          <!--info about the page, services(explained), docs(cv, resume, certificates, etc) etc-->
+          <h2>About</h2>
+        
+          <div>
+            <h3>Web Development</h3>
+            <p>About the service</p>
+          </div>
+        
+          <div>
+            <h3>Hosting</h3>
+            <p>About the service</p>
+          </div>
+        
+          <div>
+            <h3>Support</h3>  
+            <p>About the service</p>
+          </div>
+        
+        </article>
+      
+        <article class="docs">
+          <h2>Docs</h2>
+        
+          <div class="banner">
+            <img src="/src/res/img1.jpeg" alt="doc 1" class="img" />
+            <img src="/src/res/img2.jpeg" alt="doc 2" class="img" />
+            <img src="/src/res/img3.jpeg" alt="doc 3" class="img" />
+            <img src="/src/res/img4.jpeg" alt="doc 4" class="img" />
+            <img src="/src/res/img5.jpeg" alt="doc 5" class="img" />
+          </div>
+        </article>
+      
+      </section>
+    
+    </main>
+  
+    <footer>
+      <a href="legal.html" title="Terms and Conditions and Policy">&copy;my page</a>
+    
+      <nav>
+          <a href="/">Yarvis405-github</a><!--add svg for each social link -->
+          <a href="#">Linkeding</a>
+      </nav>
+    </footer>
+
+  </body>
+</html>

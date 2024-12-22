@@ -1,0 +1,37 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "emulators": {
+    "firestore": {
+      "host": "192.168.84.197",
+      "port": 8080
+    },
+    "database": {
+      "host": "192.168.84.197",
+      "port": 9000
+    },
+    "hosting": {
+      "host": "192.168.84.197",
+      "port": 5000
+    },
+    "ui": {
+      "host": "192.168.84.197",
+      "port": 4000,
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}

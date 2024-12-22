@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/qoradadura/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bin</title>
+  
+<style id="jsbin-css">
+*  {
+  margin: 0;
+  padding : .6rem;
+  font-family: 'Courier New', cursive;
+  /* border: solid 1px skyblue; */
+  border-radius: 5px;
+  color: #cdcdcd;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  background: #111;
+  grid-template-rows: auto 1fr auto;
+}
+
+header, footer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+header{
+  border-bottom: solid 1px;
+}
+
+footer{
+  border-top: solid 1px;
+}
+
+main {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+section {
+  width: 80%;
+  margin: 1rem auto;
+  /* box-shadow: 0px 0px 16px 0.5px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+article{
+  
+  box-shadow: 0px 0px 12px 0.5px;
+}
+
+section *{
+  /* box-shadow: 0px 0px 16px 0.5px; */
+  min-height: 95%;
+  min-width: auto;
+  flex: 1;
+}
+
+input{
+  color: black;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="/">my portfolio</a>
+    </h1>
+    
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  
+  <main>
+    <!--
+      - Home
+      - Service
+      - About
+    -->
+    
+    <!-- Home -->
+    <section class="home">
+      
+      <article class="aboutMe!">
+        
+        <h2>Who Am I?</h2>
+        
+        <div>
+          <h3>Eben C.</h3>
+          <p>description/brief/summary</p>
+        </div>
+      
+      </article>
+      
+      <article class="projects">
+        
+        <h2>Projects</h2>
+        
+        <div class="banners">
+          <img src="/" alt="project 1" />
+          <img src="/" alt="project 2" />
+          <img src="/" alt="project 3" />
+          <img src="/" alt="project 4" />
+        </div>
+      
+      </article>
+    
+    </section>
+    
+    <!--Services-->
+    <section class="services">
+      
+      <article class="form">
+        <h2>Services</h2>
+        
+        <form>
+            
+          <div class="mail">
+            <label for="mail">Email</label>
+            <input type="email" placeholder="example@domain.com" required />
+          </div>
+          
+          <ul>
+
+            <li>
+              <input type="radio" name="option" id="option-dev">
+              <label for="option-dev">Web Development</label>
+            </li>
+            
+            <li>
+              <input type="radio" name="option" id="option-hosting">
+              <label for="option-hosting">Hosting</label>
+            </li>
+            
+            <li>
+              <input type="radio" name="option" id="option-support">
+              <label for="option-support">Support</label>
+            </li>
+            
+          </ul>
+          
+          <input type="submit" class="btn">
+        
+        </form>
+        
+      </article>
+      
+    </section>
+    
+    <!--About-->
+    <section class="about">
+      
+      <article class="main">
+        <!--info about the page, services(explained), docs(cv, resume, certificates, etc) etc-->
+        <h2>About</h2>
+        
+        <div>
+          <h3>Web Development</h3>
+          <p>About the service</p>
+        </div>
+        
+        <div>
+          <h3>Hosting</h3>
+          <p>About the service</p>
+        </div>
+        
+        <div>
+          <h3>Support</h3>  
+          <p>About the service</p>
+        </div>
+        
+      </article>
+      
+      <article class="docs">
+        <h2>Docs</h2>
+        
+        <div class="banners">
+          <img src="/" alt="doc 1" />
+          <img src="/" alt="doc 2" />
+          <img src="/" alt="doc 3" />
+          <img src="/" alt="doc 4" />
+        </div>
+      </article>
+      
+    </section>
+    
+  </main>
+  
+  <footer>
+    <a href="legal.html" title="Terms and Conditions and Policy">&copy;my page</a>
+    
+    <nav>
+        <a href="/">Yarvis405-github</a><!--add svg for each social link -->
+        <a href="#">Linkeding</a>
+    </nav>
+  </footer>
+
+<script id="jsbin-javascript">
+//import {createApp as create } from 'https://unpkg.com/petite-vue?module'
+    
+//console.log(create)
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+curl https://raw.githubusercontent.com/vuejs/petite-vue/refs/heads/main/README.md | less

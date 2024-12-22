@@ -1,0 +1,83 @@
+{
+  "header": {
+    "title": "My Portfolio",
+
+    "menu": {
+      "services": {
+        "value": "Services",
+        "id": "#services"
+      },
+
+      "about": {
+        "value": "About",
+        "id": "#about"
+      }
+    }
+  },
+
+  "main": {
+
+    "whoami": {
+      "developer": "Eben C.",
+      "description": "description",
+
+      "projects": {
+        "default": {
+          "value": "default",
+          "src": "data:image/webp;base64,..."
+        }
+      }
+    },
+
+    "about": {
+      "webdev": {
+        "title": "Web Developer",
+        "description": "About the service"
+      },
+
+      "hosting": {
+        "title": "Hosting",
+        "description": "About the service"
+      },
+
+      "support": {
+        "title": "Support",
+        "description": "About the service"
+      },
+
+      "docs": [
+
+        {
+          "value": "CV",
+          "src": "data:image/webp;base64,..."
+        },
+
+        {
+          "value": "ex: PHP Certificate",
+          "src": "data:image/webp;base64,..."
+        }
+      ]
+    }
+  },
+
+  "footer": {
+    "legal": "&copy;My Page",
+
+    "menu": [
+      {
+        "value": "Github",
+        "url": "https://github.com",
+        "icon": "svg data"
+      },
+
+      {
+        "value": "Linkedin",
+        "url": "https://Linkedin.com",
+        "icon": "svg data"
+      }
+    ]
+
+  }
+}
+
+
